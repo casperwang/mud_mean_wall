@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Data Structure}{1}%
+\contentsline {subsection}{\numberline {1.1}segment tree}{1}%
+\contentsline {subsection}{\numberline {1.2}treap}{1}%
+\contentsline {subsection}{\numberline {1.3}persistent segment tree}{2}%
+\contentsline {subsection}{\numberline {1.4}lichao segment tree}{2}%
+\contentsline {section}{\numberline {2}String}{3}%
+\contentsline {subsection}{\numberline {2.1}SAM}{3}%

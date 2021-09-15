@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.22)  4 NOV 2020 14:16
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.22)  15 SEP 2021 21:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -518,15 +518,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 LaTeX Font Warning: Font shape `TU/Consolas(0)/b/n' undefined
 (Font)              using `TU/Consolas(0)/m/n' instead on input line 107.
 
-(./codebook.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+(./codebook.toc)
 \tf@toc=\write3
 \openout3 = `codebook.toc'.
 
@@ -547,12 +539,16 @@ Package fontspec Info: Font family 'FandolFang-Regular(0)' created for font
 (fontspec)             <->"[FandolFang-Regular.otf]/OT:language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
-(./dataStructure/seg_tree.cpp
+(./5_String/SAM.cpp
 
 LaTeX Font Warning: Font shape `TU/Monaco(0)/b/n' undefined
 (Font)              using `TU/Monaco(0)/m/n' instead on input line 1.
 
-) (./dataStructure/treap.cpp
+
+LaTeX Font Warning: Font shape `TU/Monaco(0)/m/it' undefined
+(Font)              using `TU/Monaco(0)/m/n' instead on input line 52.
+
+)
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
 Make it at least 3.60004pt.
@@ -561,24 +557,18 @@ This may cause the page layout to be inconsistent, however.
 
 [1
 
-]) (./dataStructure/per_seg.cpp) (./dataStructure/lichao.cpp [2])
-(./string/SAM.cpp
-
-LaTeX Font Warning: Font shape `TU/Monaco(0)/m/it' undefined
-(Font)              using `TU/Monaco(0)/m/n' instead on input line 52.
-
-) [3] (./codebook.aux)
+] (./codebook.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 8995 strings out of 479418
- 201487 string characters out of 5884585
- 1169411 words of memory out of 5000000
- 26383 multiletter control sequences out of 15000+600000
- 533845 words of font info for 57 fonts, out of 8000000 for 9000
+ 8835 strings out of 479418
+ 199504 string characters out of 5884585
+ 915411 words of memory out of 5000000
+ 26250 multiletter control sequences out of 15000+600000
+ 532530 words of font info for 48 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 48i,12n,78p,248b,1629s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,11n,78p,248b,1126s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on codebook.pdf (3 pages).
+Output written on codebook.pdf (1 page).

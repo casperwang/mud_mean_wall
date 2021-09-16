@@ -1,0 +1,5 @@
+set nu rnu cin ts=2 sw=2 bs=2 mouse=a
+color default
+sy on
+inoremap {<CR> {<CR>}<C-o>O
+nnoremap exe :w<bar>!g++-8 -std=c++17 -Wall -Wextra -Wfatal-errors -fsanitize=undefined -o test "%" && echo "done" && ./test<CR>

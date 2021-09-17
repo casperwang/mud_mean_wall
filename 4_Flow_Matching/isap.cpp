@@ -1,4 +1,4 @@
-struct Maxflow {
+struct Maxflow {// 1-base
     static const int MAXV = 20010;
     static const int INF = 1000000;
     struct Edge {

@@ -1,12 +1,12 @@
 struct GenMatch { // 1-base
-  int V, pr[N];
-  bool el[N][N], inq[N], inp[N], inb[N];
-  int st, ed, nb, bk[N], djs[N], ans;
+  int V, match[MAXN];
+  bool el[MAXN][MAXN], inq[MAXN], inp[MAXN], inb[MAXN];
+  int st, ed, nb, bk[MAXN], djs[MAXN], ans;
   void init(int _V) {
     V = _V;
     for (int i = 0; i <= V; ++i) {
       for (int j = 0; j <= V; ++j) el[i][j] = 0;
-      pr[i] = bk[i] = djs[i] = 0;
+      match[i] = bk[i] = djs[i] = 0;
       inq[i] = inp[i] = inb[i] = 0;
     }
   }
@@ -17,15 +17,15 @@ struct GenMatch { // 1-base
     fill_n(inp, V + 1, 0);
     while (1)
       if (u = djs[u], inp[u] = true, u == st) break;
-      else u = bk[pr[u]];
+      else u = bk[match[u]];
     while (1)
       if (v = djs[v], inp[v]) return v;
-      else v = bk[pr[v]];
+      else v = bk[match[v]];
     return v;
   }
   void upd(int u) {
     for (int v; djs[u] != nb;) {
-      v = pr[u], inb[djs[u]] = inb[djs[v]] = true;
+      v = match[u], inb[djs[u]] = inb[djs[v]] = true;
       u = bk[v];
       if (djs[u] != nb) bk[u] = v;
     }
@@ -50,13 +50,13 @@ struct GenMatch { // 1-base
       qe.pop();
       for (int v = 1; v <= V; ++v)
         if (el[u][v] && djs[u] != djs[v] &&
-          pr[u] != v) {
+          match[u] != v) {
           if ((v == st) ||
-            (pr[v] > 0 && bk[pr[v]] > 0))
+            (match[v] > 0 && bk[match[v]] > 0))
             blo(u, v, qe);
           else if (!bk[v]) {
-            if (bk[v] = u, pr[v] > 0) {
-              if (!inq[pr[v]]) qe.push(pr[v]);
+            if (bk[v] = u, match[v] > 0) {
+              if (!inq[match[v]]) qe.push(match[v]);
             } else return ed = v, void();
           }
         }
@@ -64,13 +64,13 @@ struct GenMatch { // 1-base
   }
   void aug() {
     for (int u = ed, v, w; u > 0;)
-      v = bk[u], w = pr[v], pr[v] = u, pr[u] = v,
+      v = bk[u], w = match[v], match[v] = u, match[u] = v,
       u = w;
   }
   int solve() {
-    fill_n(pr, V + 1, 0), ans = 0;
+    fill_n(match, V + 1, 0), ans = 0;
     for (int u = 1; u <= V; ++u)
-      if (!pr[u])
+      if (!match[u])
         if (st = u, flow(), ed > 0) aug(), ++ans;
     return ans;
   }

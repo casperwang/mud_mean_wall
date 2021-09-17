@@ -1,4 +1,4 @@
-struct MaxFlow { // 0-base
+struct MaxFlow { // 1-base
   struct edge {
     int to, cap, flow, rev;
   };

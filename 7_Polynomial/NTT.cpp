@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-#define LL long long
-using namespace std;
 //(2^16)+1, 65537, 3
 //7*17*(2^23)+1, 998244353, 3
 //1255*(2^20)+1, 1315962881, 3
@@ -8,14 +5,7 @@ using namespace std;
 template<int MAXN, LL P, LL RT> //MAXN must be 2^k
 struct NTT {
   LL w[MAXN];
-  //LL mpow(LL a, LL n);
-  LL mpow(LL a,LL b)
-  {
-    if(b == 0) return 1;
-    LL ret = mpow(a,b/2);
-    if(b & 1) return ret*ret%P*a%P;
-    return ret*ret%P;
-  }
+  LL mpow(LL a, LL n);
   LL minv(LL a) { return mpow(a, P - 2); }
   NTT() {
     LL dw = mpow(RT, (P - 1) / MAXN);
@@ -48,15 +38,3 @@ struct NTT {
     }
   }
 };
-NTT<8,(long long)(998244353),(long long)3> T;
-int main()
-{
-    LL A[8];
-    for(int i = 0;i < 8;i++) A[i] = i;
-    T(A,8);
-    for(int i = 0;i < 8;i++) cout << A[i] << " ";
-    cout << endl;
-    T(A,8,1);
-    for(int i = 0;i < 8;i++) cout << A[i] << " ";
-    cout << endl;
-}

@@ -1,16 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-typedef long long ll;
-typedef pair<int, int> pii;
-typedef pair<ll, ll> pll;
-#define X first
-#define Y second
-#define SZ(a) ((int)a.size())
-#define ALL(v) v.begin(), v.end()
-#define pb push_back
-const int MAXN = 100;
-const ll INF = 1e18;
-
 // Minimum Steiner Tree
 // O(V 3^T + V^2 2^T)
 struct SteinerTree { // 0-base
@@ -66,24 +53,4 @@ struct SteinerTree { // 0-base
       ans = min(ans, dp[(1 << t) - 1][i]);
     return ans;
   }
-} T;
-
-int N, M, K;
-int a, b, c;
-vector <int> arr;
-
-signed main() {
-	ios_base::sync_with_stdio(0), cin.tie(0);
-	cin >> N >> M >> K;
-  T.init(N);
-  for (int i = 0; i < M; i++) {
-    cin >> a >> b >> c;
-    T.add_edge(a-1, b-1, c);
-    T.add_edge(b-1, a-1, c);
-  }
-  for (int i = 0; i < K; i++) {
-    cin >> a;
-    arr.pb(a-1);
-  }
-  cout << T.solve(arr) << '\n';
-}
+};
